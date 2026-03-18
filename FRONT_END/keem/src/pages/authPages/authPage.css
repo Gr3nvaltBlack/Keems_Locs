@@ -1,0 +1,214 @@
+/* 
+                ###########################
+                    Auth Profile Page
+                ###########################
+
+*/
+
+
+.profile-page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-navbar-part {
+    width: 19%;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+}
+
+.right-profile-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 81%;
+    background-color: rgb(248, 248, 248);
+    gap: 5rem;
+}
+
+.identite {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 1px 1.5px 1px;
+    z-index: 1;
+}
+.identite hr {
+    width: 95%;
+}
+
+.username, .date-of-birth, .gender, .phone-number, .email {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+
+.user-part, .birth-part, .gender-part, .phone-part, .email-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    width: 30%;
+}
+
+
+/* 
+                ###########################
+                    Auth Password Page
+                ###########################
+
+*/
+
+
+.password-page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-password-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 81%;
+    background-color: rgb(248, 248, 248);
+    gap: 5rem;
+}
+
+.password-part {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 2.5rem;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 1px 1.5px 1px;
+    z-index: 1;
+}
+.password-part input {
+    width: 40%;
+    border-radius: 5px;
+    padding: 6px 3px;
+    font-size: larger;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.intro-password-part {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat' 
+}
+
+.new-password .password-recommendation {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+}
+
+
+/* 
+                ###########################
+                  Auth Communication Page
+                ###########################
+
+*/
+
+
+.communication-page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.communication-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 81%;
+    background-color: rgb(247, 247, 247);
+    gap: 5rem;
+    padding-bottom: 20px;
+}
+
+.preference-communication-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 1px 1.5px 1px;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.communication-choice-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 1px 1.5px 1px;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.toogle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.switch-communicate {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 35px;
+}
+.switch-communicate input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

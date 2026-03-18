@@ -1,0 +1,133 @@
+.article-component{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.article-detail {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.article-detail img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 0 10px;
+    gap: 1rem;
+}
+
+.article-info h1 {
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+    font-size: 3.8em;
+}
+
+.article-price {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    width: 50%;
+}
+
+.article-color-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+.article-color-detail h3, .article-size-detail h3{
+    font-family: 'Playfair Display';
+    font-size: 1.5rem;
+    margin: 0;
+}
+.article-color-detail ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    list-style: none;
+}
+
+.color-hexa-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.article-size-detail {
+    display: flex;
+    flex-direction: row;
+    gap: 0.9rem;
+    width: 50%;
+}
+
+.article-size-detail select {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 25px;
+    width: 80px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.article-selected-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 60px;
+}
+
+.button-selected-part {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.button-selected-part button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #e0b159ff;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.article-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 23px;
+    border: 1px solid #000;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.article-description {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}

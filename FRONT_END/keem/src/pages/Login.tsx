@@ -1,8 +1,9 @@
 import { ButtonStyled } from '../styled-components/StyledFile';
 import { useAuth } from '../Context/AuthContext';
 import { PostLogin } from '../services/api';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import { Helmet } from "react-helmet";
 
 import styled from "styled-components";
 
@@ -11,6 +12,7 @@ import './Log.css'
 
 const Login = ()=> {
     const { login, authToken }= useAuth()
+    const navigate = useNavigate()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -25,7 +27,7 @@ const Login = ()=> {
             }
             console.log(response)
             login(response["access"])
-            // window.location.href = "/";
+            navigate("/auth/profile")
         } catch (error) {
             return { error: "An error has occurred" }
         }
@@ -33,6 +35,11 @@ const Login = ()=> {
 
     return (
         <div className="log-container">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Keem | Connectez-vous</title>
+                </Helmet>
+
             <form action="" className="Formulaire" onSubmit={onSubmit}>
                 <div className="text-intro">
                     <h2>Identifiez-vous</h2>
@@ -40,10 +47,10 @@ const Login = ()=> {
                 
                 <div className='registration'>
                     <div className="username-info">
-                        <h3>Username</h3>
+                        <h3>Nom Utilisateur</h3>
                         <input
                             type="text"
-                            placeholder="Name"
+                            placeholder="Nom Utilisateur"
                             required
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
@@ -68,7 +75,7 @@ const Login = ()=> {
 
                 <div className="condition-of-use">
                     <p>
-                        En appuyant sur Continuer, vous acceptez les <a href=''>conditions d'utilisation et de vente </a> de BLABLA.
+                        En appuyant sur Continuer, vous acceptez les <a href=''>conditions d'utilisation et de vente </a> de <strong>KEEM</strong>.
                         Consultez notre <a href="">déclaration de confidentialité</a>, notre <a href="">politique relative aux cookies</a>.
                     </p>
                     <a href="">Vous avez besoin d'aide pour vous identifier ?</a>
@@ -81,7 +88,7 @@ const Login = ()=> {
             </form>
 
             <div className="create-an-account">
-                <h4>Nouveau chez Moi ?</h4>
+                <h4>Nouveau chez <strong>KEEM</strong> ?</h4>
             </div>
             <LoginPass to={"/register"}>Créer votre compte</LoginPass>
         </div>

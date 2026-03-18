@@ -2,11 +2,15 @@ import { ButtonStyled } from "../styled-components/StyledFile";
 import { IoAlertCircle } from "react-icons/io5";
 import { PostRegister } from "../services/api";
 import { useState } from 'react';
+import { Helmet } from "react-helmet";
 
 import './Log.css'
+import { useNavigate } from "react-router-dom";
 
 
 const Register = () => {
+    const navigate = useNavigate()
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -23,7 +27,8 @@ const Register = () => {
             if(confirmPassword !== password) {
                 return 'bad'
             }
-            // window.location.href = "/";
+            console.log(response)
+            navigate("/login")
         } catch (error) {
             return { error }
         }
@@ -32,6 +37,11 @@ const Register = () => {
 
     return (
         <div className="log-container">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Keem | Créez votre compte</title>
+                </Helmet>
+
             <form action="" className="Formulaire" onSubmit={onSubmit}>
                 <div className="text-intro">
                     <h2>Créer un compte</h2>
@@ -40,10 +50,10 @@ const Register = () => {
 
                 <div className="registration">
                     <div className="username-info">
-                        <h3>Username</h3>
+                        <h3>Nom Utilisateur</h3>
                         <input
                             type="text"
-                            placeholder="Prénom et nom"
+                            placeholder="Nom Utilisateur"
                             required
                             onChange={(e) => setName(e.target.value)}
                             value={name}

@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --third-color: #e5c1a3;
+    --test-color: red;
+    --test-color-2: blue;
+    --text-font: 'Montserrat';
+    --title-font: 'Playfair Display';
+    --button-bg-color: #d8b46f;
+}
+
+.PresentationSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    width: 100%;
+    min-height: 80vh;
+    background-color: var(--third-color);
+}
+.PresentationSection img {
+    width: 50%;
+    height: 80%;
+    margin-right: 1rem;
+    border-radius: 3%;
+}
+
+.PresentationSection .PresentationContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.PresentationContent button {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.WhoWeAre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    margin-top: 2rem;
+    background-color: var(--third-color);
+}
+.WhoWeAre .WhoWeAreContent {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+.WhoWeAreContent img {
+    width: 30%;
+    border-radius: 3%;
+}
+
+.OursModels {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 65vh;
+    margin-top: 2rem;
+    background-color: var(--third-color);
+}
+.OursModels h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.OursModels .ModelsContent {
+    display: flex;
+    justify-content: center;
+}
+
+
+.TrustPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+}
+.TrustPart .PAYRET {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    min-height: 300px;
+    background-color: var(--secondary-color);
+}
+.PAYRET .svg {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+.TrustPart .DELISERV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    min-height: 300px;
+    background-color: var(--primary-color);
+}
+.DELISERV .svg {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+.DELISERV h3 {
+    color: var(--secondary-color);
+}
+
+.WTSAU {
+    background-color: var(--third-color);
+}
